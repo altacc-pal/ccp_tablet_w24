@@ -60,6 +60,24 @@ ul {
     margin: 0;
 }
 
+.typewriter h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation:
+        typing 2.5s steps(40, end) forwards,
+        blinking-cursor .55s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0; left: 0;}
+    to {width: 100%; left: 0;}
+}
+
+@keyframes blinking-cursor {
+    25% { border-right: .15em solid #000000 }
+}
+
 .three-grid-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
