@@ -62,20 +62,20 @@ ul {
 
 .three-grid-gallery {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     padding: 15px;
 }
 
 .two-grid-gallery {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 50% 50%;
     gap: 15px;
     padding: 15px;
 }
 
 .skip-link {
-    position: absolute;
+    position: fixed;
     top: -40px;
     left: 15px;
     background-color: #31473A;
@@ -103,6 +103,7 @@ ul {
     color: white;
     text-align: center;
     padding: 14px 20px;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -114,7 +115,35 @@ ul {
 
 @media (prefers-reduced-motion: reduce) {
     img, video, .animation-class {
-      animation: none !important;
-      transition: none !important;
+      animation: none;
+      transition: none;
+    }
+}
+
+@media (min-width: 800px) {
+
+    .two-grid-gallery {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    h1 {
+        font-size: calc(60px + 30%);
+    }
+
+
+    h2 {
+        font-size: calc(24px + 30%);
+    }
+
+    h3 {
+        font-size: calc(16px + 30%);
+    }
+
+    p {
+        font-size: calc(16px + 30%);
+    }
+
+    .navbar a {
+        font-size: calc(16px + 50%);
     }
 }
